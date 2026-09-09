@@ -26,7 +26,7 @@ export const tools: Tool[] = [
   { name: "Extract Pages", slug: "extract-pages", description: "Pull selected pages into a new PDF file.", category: "organize", color: "#E74C3C", icon: "extract", available: true },
   { name: "Rotate PDF", slug: "rotate-pdf", description: "Rotate your PDF pages the way you need them.", category: "organize", color: "#E74C3C", icon: "rotate", available: true },
   { name: "Compress PDF", slug: "compress-pdf", description: "Reduce file size while optimizing for quality.", category: "organize", color: "#E67E22", icon: "compress", available: true },
-  { name: "Organize PDF", slug: "organize-pdf", description: "Sort pages in any order. Delete or add pages.", category: "organize", color: "#E74C3C", icon: "organize", available: false },
+  { name: "Organize PDF", slug: "organize-pdf", description: "Sort pages in any order. Delete or add pages.", category: "organize", color: "#E74C3C", icon: "organize", available: true },
   { name: "Page Numbers", slug: "page-numbers", description: "Add page numbers to your PDF with custom position.", category: "organize", color: "#E74C3C", icon: "numbers", available: true },
 
   // Convert to PDF
@@ -46,10 +46,10 @@ export const tools: Tool[] = [
 
   // Edit PDF
   { name: "Edit PDF", slug: "edit-pdf", description: "Add text, images, shapes, and annotations.", category: "edit", color: "#27AE60", icon: "edit", available: true },
-  { name: "Sign PDF", slug: "sign-pdf", description: "Sign or request electronic signatures.", category: "edit", color: "#27AE60", icon: "sign", available: false },
+  { name: "Sign PDF", slug: "sign-pdf", description: "Sign or request electronic signatures.", category: "edit", color: "#27AE60", icon: "sign", available: true },
   { name: "Watermark", slug: "watermark", description: "Stamp text or image watermarks on pages.", category: "edit", color: "#27AE60", icon: "watermark", available: true },
   { name: "PDF Forms", slug: "pdf-forms", description: "Create and fill interactive form fields.", category: "edit", color: "#27AE60", icon: "forms", available: false },
-  { name: "Redact PDF", slug: "redact-pdf", description: "Permanently remove sensitive content.", category: "edit", color: "#27AE60", icon: "redact", available: false },
+  { name: "Redact PDF", slug: "redact-pdf", description: "Permanently remove sensitive content.", category: "edit", color: "#27AE60", icon: "redact", available: true },
   { name: "Crop PDF", slug: "crop-pdf", description: "Adjust margins and crop page areas.", category: "edit", color: "#27AE60", icon: "crop", available: true },
 
   // Optimize PDF
