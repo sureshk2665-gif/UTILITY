@@ -2,9 +2,25 @@ import Link from "next/link";
 import { tools } from "@/lib/tools";
 import ToolGrid from "@/components/ToolGrid";
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  name: "PDF Tools Online",
+  url: "https://pdf-tools-utility.vercel.app",
+  description: "Free online PDF tools to merge, split, compress, convert, rotate, and edit PDF files.",
+  applicationCategory: "Utility",
+  operatingSystem: "Any",
+  offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+  featureList: tools.filter((t) => t.available).map((t) => t.name),
+};
+
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Hero */}
       <section className="bg-gradient-to-b from-primary to-primary-dark py-16 sm:py-24 px-4 text-center">
         <h1 className="text-3xl sm:text-5xl font-bold text-white mb-4 max-w-3xl mx-auto leading-tight">

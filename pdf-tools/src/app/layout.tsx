@@ -29,7 +29,32 @@ export const metadata: Metadata = {
     "pdf converter",
     "pdf editor online",
     "free pdf tools",
+    "pdf to jpg",
+    "jpg to pdf",
+    "rotate pdf",
+    "watermark pdf",
+    "sign pdf",
+    "redact pdf",
+    "crop pdf",
+    "organize pdf",
   ],
+  metadataBase: new URL("https://pdf-tools-utility.vercel.app"),
+  openGraph: {
+    title: "PDF Tools Online — Free PDF Editor, Converter & Compressor",
+    description: "Free online PDF tools to merge, split, compress, convert, rotate, and edit PDF files. No installation required.",
+    url: "https://pdf-tools-utility.vercel.app",
+    siteName: "PDF Tools Online",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "PDF Tools Online — Free PDF Editor, Converter & Compressor",
+    description: "Free online PDF tools to merge, split, compress, convert, rotate, and edit PDF files.",
+  },
+  alternates: {
+    canonical: "https://pdf-tools-utility.vercel.app",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

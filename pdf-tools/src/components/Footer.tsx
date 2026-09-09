@@ -65,6 +65,8 @@ export default function Footer() {
         <div className="border-t border-white/10 mt-10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-white/50">
           <p>&copy; {new Date().getFullYear()} PDF Tools. All rights reserved.</p>
           <div className="flex gap-6">
+            <Link href="/faq" className="hover:text-white transition-colors">FAQ</Link>
+            <Link href="/api-docs" className="hover:text-white transition-colors">API</Link>
             <Link href="#" className="hover:text-white transition-colors">Privacy</Link>
             <Link href="#" className="hover:text-white transition-colors">Terms</Link>
             <Link href="#" className="hover:text-white transition-colors">Contact</Link>
