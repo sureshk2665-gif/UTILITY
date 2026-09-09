@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import AdBanner from "@/components/ads/AdBanner";
 
 export const metadata: Metadata = {
   title: "PDF to Word Conversion: Tips for Perfect Formatting (2026)",
@@ -101,6 +102,9 @@ export default function PdfToWordTips() {
             Convert PDF to Word →
           </Link>
         </div>
+      </div>
+      <div className="mt-10">
+        <AdBanner position="leaderboard-footer" />
       </div>
     </article>
   );

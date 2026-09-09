@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import AdBanner from "@/components/ads/AdBanner";
 
 export const metadata: Metadata = {
   title: "PDF Tools Blog — Tips, Guides & How-Tos",
@@ -44,20 +45,29 @@ export default function Blog() {
       <h1 className="text-3xl sm:text-4xl font-bold mb-3">PDF Tools Blog</h1>
       <p className="text-muted mb-10">Tips, guides, and how-tos for working with PDF files.</p>
 
-      <div className="space-y-8">
-        {posts.map((post) => (
-          <article key={post.slug} className="border border-border rounded-xl p-6 hover:border-primary/50 transition-colors">
-            <Link href={`/blog/${post.slug}`}>
-              <h2 className="text-xl font-bold mb-2 hover:text-primary transition-colors">{post.title}</h2>
-            </Link>
-            <p className="text-sm text-muted mb-3">{post.excerpt}</p>
-            <div className="flex items-center gap-3 text-xs text-muted">
-              <span>{post.date}</span>
-              <span>·</span>
-              <span>{post.readTime}</span>
-            </div>
-          </article>
+      <div className="space-y-6">
+        {posts.map((post, i) => (
+          <div key={post.slug}>
+            <article className="glass-card rounded-2xl p-6">
+              <Link href={`/blog/${post.slug}`}>
+                <h2 className="text-xl font-bold mb-2 hover:text-primary transition-colors">{post.title}</h2>
+              </Link>
+              <p className="text-sm text-muted mb-3">{post.excerpt}</p>
+              <div className="flex items-center gap-3 text-xs text-muted">
+                <span>{post.date}</span>
+                <span>·</span>
+                <span>{post.readTime}</span>
+              </div>
+            </article>
+            {/* In-feed ad after 2nd post */}
+            {i === 1 && <AdBanner position="in-feed-blog" />}
+          </div>
         ))}
+      </div>
+
+      {/* Leaderboard ad at bottom */}
+      <div className="mt-10">
+        <AdBanner position="leaderboard-footer" />
       </div>
     </div>
   );

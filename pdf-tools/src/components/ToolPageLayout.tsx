@@ -3,6 +3,7 @@
 import { ReactNode } from "react";
 import TrustSignals from "./TrustSignals";
 import { ToolJsonLd } from "./ToolJsonLd";
+import AdBanner from "./ads/AdBanner";
 
 interface ToolPageLayoutProps {
   title: string;
@@ -42,6 +43,11 @@ export default function ToolPageLayout({
         <div className="glass-strong rounded-2xl shadow-lg p-5 sm:p-8">
           {children}
           <TrustSignals />
+        </div>
+
+        {/* Ad below tool card — away from file input area per AdSense policy */}
+        <div className="mt-8">
+          <AdBanner position="sidebar-tool" />
         </div>
       </div>
     </div>

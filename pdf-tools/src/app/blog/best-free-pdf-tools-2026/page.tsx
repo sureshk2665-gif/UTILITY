@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import AdBanner from "@/components/ads/AdBanner";
 
 export const metadata: Metadata = {
   title: "10 Best Free Online PDF Tools in 2026 — Compared",
@@ -89,6 +90,9 @@ export default function BestPDFTools() {
             Explore All Tools
           </Link>
         </div>
+      </div>
+      <div className="mt-10">
+        <AdBanner position="leaderboard-footer" />
       </div>
     </article>
   );

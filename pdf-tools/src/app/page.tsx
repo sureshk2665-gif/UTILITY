@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { tools } from "@/lib/tools";
 import ToolGrid from "@/components/ToolGrid";
+import AdBanner from "@/components/ads/AdBanner";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -83,11 +84,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Ad placeholder */}
+      {/* Leaderboard Ad above footer */}
       <section className="max-w-5xl mx-auto px-4 py-8">
-        <div className="glass-card rounded-2xl h-24 flex items-center justify-center text-sm text-muted">
-          Advertisement Space — Google AdSense
-        </div>
+        <AdBanner position="leaderboard-footer" />
       </section>
     </>
   );

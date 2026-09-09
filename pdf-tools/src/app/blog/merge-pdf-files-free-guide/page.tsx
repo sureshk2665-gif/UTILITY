@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import AdBanner from "@/components/ads/AdBanner";
 
 export const metadata: Metadata = {
   title: "How to Merge PDF Files Online for Free — Complete Guide (2026)",
@@ -98,6 +99,9 @@ export default function MergePdfGuide() {
             Merge PDF Files Now →
           </Link>
         </div>
+      </div>
+      <div className="mt-10">
+        <AdBanner position="leaderboard-footer" />
       </div>
     </article>
   );

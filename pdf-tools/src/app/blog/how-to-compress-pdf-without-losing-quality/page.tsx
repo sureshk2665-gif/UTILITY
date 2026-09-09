@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import AdBanner from "@/components/ads/AdBanner";
 
 export const metadata: Metadata = {
   title: "How to Compress PDF Without Losing Quality (2026 Guide)",
@@ -61,6 +62,9 @@ export default function CompressPDFGuide() {
             Compress PDF Now
           </Link>
         </div>
+      </div>
+      <div className="mt-10">
+        <AdBanner position="leaderboard-footer" />
       </div>
     </article>
   );
