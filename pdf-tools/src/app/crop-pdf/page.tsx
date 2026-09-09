@@ -37,6 +37,7 @@ export default function CropPDF() {
 
   return (
     <ToolPageLayout
+      slug="crop-pdf"
       title="Crop PDF"
       description="Adjust margins and crop the visible area of your PDF pages."
       color="#27AE60"

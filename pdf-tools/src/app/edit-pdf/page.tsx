@@ -76,6 +76,7 @@ export default function EditPDF() {
 
   return (
     <ToolPageLayout
+      slug="edit-pdf"
       title="Edit PDF"
       description="Add text annotations to your PDF document."
       color="#27AE60"

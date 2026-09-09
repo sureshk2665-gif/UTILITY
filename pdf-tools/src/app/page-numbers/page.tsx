@@ -58,6 +58,7 @@ export default function PageNumbers() {
 
   return (
     <ToolPageLayout
+      slug="page-numbers"
       title="Add Page Numbers"
       description="Add page numbers to your PDF with custom position and starting number."
       color="#E74C3C"

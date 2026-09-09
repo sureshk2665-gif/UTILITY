@@ -49,6 +49,7 @@ export default function CompressPDF() {
 
   return (
     <ToolPageLayout
+      slug="compress-pdf"
       title="Compress PDF"
       description="Reduce PDF file size while keeping the best quality possible."
       color="#E67E22"

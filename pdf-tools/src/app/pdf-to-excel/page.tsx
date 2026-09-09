@@ -55,7 +55,7 @@ export default function PDFToExcel() {
   };
 
   return (
-    <ToolPageLayout title="PDF to Excel" description="Extract PDF tables into XLSX spreadsheets." color="#3498DB">
+    <ToolPageLayout slug="pdf-to-excel" title="PDF to Excel" description="Extract PDF tables into XLSX spreadsheets." color="#3498DB">
       <FileDropzone files={files} onFilesAdded={(f) => setFiles(f.slice(0, 1))} onRemove={() => setFiles([])} multiple={false} />
       {files.length > 0 && (
         <div className="mt-6">

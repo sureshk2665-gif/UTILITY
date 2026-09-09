@@ -31,6 +31,7 @@ export default function MergePDF() {
 
   return (
     <ToolPageLayout
+      slug="merge-pdf"
       title="Merge PDF"
       description="Combine multiple PDF files into one document in the order you want."
       color="#E74C3C"

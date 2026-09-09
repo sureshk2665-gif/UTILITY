@@ -30,6 +30,7 @@ export default function RotatePDF() {
 
   return (
     <ToolPageLayout
+      slug="rotate-pdf"
       title="Rotate PDF"
       description="Rotate all pages of your PDF by 90°, 180°, or 270°."
       color="#E74C3C"

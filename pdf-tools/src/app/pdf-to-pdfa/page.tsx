@@ -43,7 +43,7 @@ export default function PDFtoPDFA() {
   };
 
   return (
-    <ToolPageLayout title="PDF to PDF/A" description="Convert to archival format with embedded metadata." color="#3498DB">
+    <ToolPageLayout slug="pdf-to-pdfa" title="PDF to PDF/A" description="Convert to archival format with embedded metadata." color="#3498DB">
       <FileDropzone files={files} onFilesAdded={(f) => setFiles(f.slice(0, 1))} onRemove={() => setFiles([])} multiple={false} />
       {files.length > 0 && (
         <div className="mt-6 space-y-4">

@@ -46,7 +46,7 @@ export default function ProtectPDF() {
   };
 
   return (
-    <ToolPageLayout title="Protect PDF" description="Add protection watermark to prevent unauthorized use." color="#8E44AD">
+    <ToolPageLayout slug="protect-pdf" title="Protect PDF" description="Add protection watermark to prevent unauthorized use." color="#8E44AD">
       <FileDropzone files={files} onFilesAdded={handleFilesAdded} onRemove={() => setFiles([])} multiple={false} />
       {files.length > 0 && (
         <div className="mt-6 space-y-4">

@@ -31,7 +31,7 @@ export default function PDFPageCounter() {
   };
 
   return (
-    <ToolPageLayout title="PDF Page Counter" description="Instantly count pages and check file size of any PDF." color="#16A085">
+    <ToolPageLayout slug="pdf-page-counter" title="PDF Page Counter" description="Instantly count pages and check file size of any PDF." color="#16A085">
       <FileDropzone files={files} onFilesAdded={(f) => { setFiles(f.slice(0, 1)); setResult(null); }} onRemove={() => { setFiles([]); setResult(null); }} multiple={false} />
       {files.length > 0 && !result && (
         <div className="mt-6">

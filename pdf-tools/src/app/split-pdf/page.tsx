@@ -44,6 +44,7 @@ export default function SplitPDF() {
 
   return (
     <ToolPageLayout
+      slug="split-pdf"
       title="Split PDF"
       description="Separate a PDF into individual single-page files."
       color="#E74C3C"

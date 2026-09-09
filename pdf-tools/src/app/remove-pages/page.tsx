@@ -51,6 +51,7 @@ export default function RemovePages() {
 
   return (
     <ToolPageLayout
+      slug="remove-pages"
       title="Remove Pages"
       description="Select and delete specific pages from your PDF document."
       color="#E74C3C"

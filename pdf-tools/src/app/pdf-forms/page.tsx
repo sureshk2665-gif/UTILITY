@@ -70,7 +70,7 @@ export default function PDFForms() {
   };
 
   return (
-    <ToolPageLayout title="PDF Forms" description="Fill interactive form fields in your PDF." color="#27AE60">
+    <ToolPageLayout slug="pdf-forms" title="PDF Forms" description="Fill interactive form fields in your PDF." color="#27AE60">
       <FileDropzone files={files} onFilesAdded={handleFilesAdded} onRemove={() => { setFiles([]); setFields([]); }} multiple={false} />
       {files.length > 0 && (
         <div className="mt-6 space-y-4">

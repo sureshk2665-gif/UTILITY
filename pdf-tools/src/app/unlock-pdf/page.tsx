@@ -38,7 +38,7 @@ export default function UnlockPDF() {
   };
 
   return (
-    <ToolPageLayout title="Unlock PDF" description="Remove password protection from your PDF documents." color="#8E44AD">
+    <ToolPageLayout slug="unlock-pdf" title="Unlock PDF" description="Remove password protection from your PDF documents." color="#8E44AD">
       <FileDropzone files={files} onFilesAdded={handleFilesAdded} onRemove={() => setFiles([])} multiple={false} />
       {files.length > 0 && (
         <div className="mt-6 space-y-4">

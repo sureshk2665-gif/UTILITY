@@ -51,6 +51,7 @@ export default function ExtractPages() {
 
   return (
     <ToolPageLayout
+      slug="extract-pages"
       title="Extract Pages"
       description="Select pages to extract into a new PDF file."
       color="#E74C3C"

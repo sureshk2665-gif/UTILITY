@@ -46,6 +46,7 @@ export default function PdfToJpg() {
 
   return (
     <ToolPageLayout
+      slug="pdf-to-jpg"
       title="PDF to JPG"
       description="Convert each page of your PDF into a high-quality JPG image."
       color="#3498DB"

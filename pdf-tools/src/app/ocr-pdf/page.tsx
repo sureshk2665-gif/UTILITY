@@ -45,7 +45,7 @@ export default function OCRPDF() {
   };
 
   return (
-    <ToolPageLayout title="OCR PDF" description="Extract text from PDF documents." color="#16A085">
+    <ToolPageLayout slug="ocr-pdf" title="OCR PDF" description="Extract text from PDF documents." color="#16A085">
       <FileDropzone files={files} onFilesAdded={(f) => { setFiles(f.slice(0, 1)); setText(""); }} onRemove={() => { setFiles([]); setText(""); }} multiple={false} />
       {files.length > 0 && !text && (
         <div className="mt-6">

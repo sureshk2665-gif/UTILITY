@@ -65,6 +65,7 @@ export default function RedactPDF() {
 
   return (
     <ToolPageLayout
+      slug="redact-pdf"
       title="Redact PDF"
       description="Permanently cover sensitive content with black rectangles."
       color="#27AE60"

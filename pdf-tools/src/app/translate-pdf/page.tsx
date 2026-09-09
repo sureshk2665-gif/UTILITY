@@ -49,7 +49,7 @@ export default function TranslatePDF() {
   };
 
   return (
-    <ToolPageLayout title="Translate PDF" description="Extract text and translate your PDF documents." color="#16A085">
+    <ToolPageLayout slug="translate-pdf" title="Translate PDF" description="Extract text and translate your PDF documents." color="#16A085">
       <FileDropzone files={files} onFilesAdded={(f) => { setFiles(f.slice(0, 1)); setText(""); setExtracted(false); }}
         onRemove={() => { setFiles([]); setText(""); setExtracted(false); }} multiple={false} />
       {files.length > 0 && !extracted && (

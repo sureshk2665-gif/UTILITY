@@ -38,6 +38,7 @@ export default function JpgToPdf() {
 
   return (
     <ToolPageLayout
+      slug="jpg-to-pdf"
       title="JPG to PDF"
       description="Convert JPG and PNG images to a PDF document."
       color="#3498DB"

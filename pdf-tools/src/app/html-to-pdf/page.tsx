@@ -54,7 +54,7 @@ export default function HTMLToPDF() {
   };
 
   return (
-    <ToolPageLayout title="HTML to PDF" description="Convert HTML content to PDF documents." color="#3498DB">
+    <ToolPageLayout slug="html-to-pdf" title="HTML to PDF" description="Convert HTML content to PDF documents." color="#3498DB">
       <div className="space-y-4">
         <div>
           <label className="text-sm font-medium block mb-2">Paste your HTML code</label>

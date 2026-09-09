@@ -67,7 +67,7 @@ export default function AISummarizer() {
   };
 
   return (
-    <ToolPageLayout title="AI Summarizer" description="Generate smart summaries of your PDF documents." color="#16A085">
+    <ToolPageLayout slug="ai-summarizer" title="AI Summarizer" description="Generate smart summaries of your PDF documents." color="#16A085">
       <FileDropzone files={files} onFilesAdded={(f) => { setFiles(f.slice(0, 1)); setSummary(""); }} onRemove={() => { setFiles([]); setSummary(""); }} multiple={false} />
       {files.length > 0 && !summary && (
         <div className="mt-6 space-y-4">

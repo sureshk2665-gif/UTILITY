@@ -60,7 +60,7 @@ export default function PDFToMarkdown() {
   };
 
   return (
-    <ToolPageLayout title="PDF to Markdown" description="Convert PDF to Markdown for notes and docs." color="#3498DB">
+    <ToolPageLayout slug="pdf-to-markdown" title="PDF to Markdown" description="Convert PDF to Markdown for notes and docs." color="#3498DB">
       <FileDropzone files={files} onFilesAdded={(f) => { setFiles(f.slice(0, 1)); setMarkdown(""); }} onRemove={() => { setFiles([]); setMarkdown(""); }} multiple={false} />
       {files.length > 0 && !markdown && (
         <div className="mt-6">

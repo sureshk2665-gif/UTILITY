@@ -64,7 +64,7 @@ export default function ScanToPDF() {
   };
 
   return (
-    <ToolPageLayout title="Scan to PDF" description="Capture documents with your camera and convert to PDF." color="#E67E22">
+    <ToolPageLayout slug="scan-to-pdf" title="Scan to PDF" description="Capture documents with your camera and convert to PDF." color="#E67E22">
       <div className="space-y-4">
         {!streaming ? (
           <button onClick={startCamera}

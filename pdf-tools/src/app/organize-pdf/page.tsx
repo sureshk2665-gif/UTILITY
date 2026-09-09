@@ -63,6 +63,7 @@ export default function OrganizePDF() {
 
   return (
     <ToolPageLayout
+      slug="organize-pdf"
       title="Organize PDF"
       description="Reorder, duplicate, or remove pages from your PDF."
       color="#E74C3C"

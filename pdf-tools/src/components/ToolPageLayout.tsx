@@ -2,11 +2,13 @@
 
 import { ReactNode } from "react";
 import TrustSignals from "./TrustSignals";
+import { ToolJsonLd } from "./ToolJsonLd";
 
 interface ToolPageLayoutProps {
   title: string;
   description: string;
   color: string;
+  slug?: string;
   children: ReactNode;
 }
 
@@ -14,10 +16,12 @@ export default function ToolPageLayout({
   title,
   description,
   color,
+  slug,
   children,
 }: ToolPageLayoutProps) {
   return (
     <div className="min-h-[calc(100vh-4rem)]">
+      {slug && <ToolJsonLd slug={slug} />}
       {/* Hero */}
       <div className="py-10 sm:py-14 text-center px-4" style={{ backgroundColor: color }}>
         <h1 className="text-2xl sm:text-4xl font-bold text-white mb-2">

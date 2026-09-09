@@ -66,7 +66,7 @@ export default function WordToPDF() {
   };
 
   return (
-    <ToolPageLayout title="Word to PDF" description="Convert DOC and DOCX files to PDF." color="#3498DB">
+    <ToolPageLayout slug="word-to-pdf" title="Word to PDF" description="Convert DOC and DOCX files to PDF." color="#3498DB">
       <FileDropzone files={files} onFilesAdded={(f) => setFiles(f.slice(0, 1))} onRemove={() => setFiles([])}
         multiple={false} accept={{ "application/vnd.openxmlformats-officedocument.wordprocessingml.document": [".docx"], "application/msword": [".doc"] }} />
       {files.length > 0 && (

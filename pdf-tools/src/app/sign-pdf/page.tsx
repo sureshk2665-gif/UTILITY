@@ -116,6 +116,7 @@ export default function SignPDF() {
 
   return (
     <ToolPageLayout
+      slug="sign-pdf"
       title="Sign PDF"
       description="Draw your signature and place it on any page of your PDF."
       color="#27AE60"

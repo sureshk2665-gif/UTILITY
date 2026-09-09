@@ -45,7 +45,7 @@ export default function RepairPDF() {
   };
 
   return (
-    <ToolPageLayout title="Repair PDF" description="Fix damaged or corrupted PDF files." color="#E67E22">
+    <ToolPageLayout slug="repair-pdf" title="Repair PDF" description="Fix damaged or corrupted PDF files." color="#E67E22">
       <FileDropzone files={files} onFilesAdded={handleFilesAdded} onRemove={() => { setFiles([]); setStatus(null); }} multiple={false} />
       {files.length > 0 && (
         <div className="mt-6 space-y-4">

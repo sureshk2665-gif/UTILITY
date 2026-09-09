@@ -44,6 +44,7 @@ export default function Watermark() {
 
   return (
     <ToolPageLayout
+      slug="watermark"
       title="Watermark PDF"
       description="Add a text watermark to every page of your PDF."
       color="#27AE60"

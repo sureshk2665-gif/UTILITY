@@ -57,7 +57,7 @@ export default function PPTToPDF() {
   };
 
   return (
-    <ToolPageLayout title="PowerPoint to PDF" description="Convert PPT and PPTX slides to PDF." color="#3498DB">
+    <ToolPageLayout slug="ppt-to-pdf" title="PowerPoint to PDF" description="Convert PPT and PPTX slides to PDF." color="#3498DB">
       <FileDropzone files={files} onFilesAdded={(f) => setFiles(f.slice(0, 1))} onRemove={() => setFiles([])}
         multiple={false} accept={{ "application/vnd.openxmlformats-officedocument.presentationml.presentation": [".pptx"] }} />
       {files.length > 0 && (

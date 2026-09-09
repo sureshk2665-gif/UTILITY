@@ -66,7 +66,7 @@ export default function ExcelToPDF() {
   };
 
   return (
-    <ToolPageLayout title="Excel to PDF" description="Convert XLSX spreadsheets to PDF." color="#3498DB">
+    <ToolPageLayout slug="excel-to-pdf" title="Excel to PDF" description="Convert XLSX spreadsheets to PDF." color="#3498DB">
       <FileDropzone files={files} onFilesAdded={(f) => setFiles(f.slice(0, 1))} onRemove={() => setFiles([])}
         multiple={false} accept={{ "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet": [".xlsx"], "application/vnd.ms-excel": [".xls"], "text/csv": [".csv"] }} />
       {files.length > 0 && (

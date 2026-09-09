@@ -66,7 +66,7 @@ export default function ComparePDF() {
   const maxPages = Math.max(pages1.length, pages2.length);
 
   return (
-    <ToolPageLayout title="Compare PDF" description="Side-by-side visual comparison of two PDF documents." color="#E67E22">
+    <ToolPageLayout slug="compare-pdf" title="Compare PDF" description="Side-by-side visual comparison of two PDF documents." color="#E67E22">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           <label className="text-sm font-medium block mb-2">First PDF</label>
