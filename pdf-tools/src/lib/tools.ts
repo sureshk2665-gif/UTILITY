@@ -41,28 +41,28 @@ export const tools: Tool[] = [
   { name: "PDF to Word", slug: "pdf-to-word", description: "Convert PDF to editable DOCX documents.", category: "convert", color: "#3498DB", icon: "word", available: true },
   { name: "PDF to PowerPoint", slug: "pdf-to-ppt", description: "Turn your PDF into a PPTX slideshow.", category: "convert", color: "#3498DB", icon: "ppt", available: true },
   { name: "PDF to Excel", slug: "pdf-to-excel", description: "Extract PDF tables into XLSX spreadsheets.", category: "convert", color: "#3498DB", icon: "excel", available: true },
-  { name: "PDF to PDF/A", slug: "pdf-to-pdfa", description: "Convert to ISO-standard archive format.", category: "convert", color: "#3498DB", icon: "archive", available: false },
-  { name: "PDF to Markdown", slug: "pdf-to-markdown", description: "Convert PDF to Markdown for notes and docs.", category: "convert", color: "#3498DB", icon: "markdown", available: false },
+  { name: "PDF to PDF/A", slug: "pdf-to-pdfa", description: "Convert to ISO-standard archive format.", category: "convert", color: "#3498DB", icon: "archive", available: true },
+  { name: "PDF to Markdown", slug: "pdf-to-markdown", description: "Convert PDF to Markdown for notes and docs.", category: "convert", color: "#3498DB", icon: "markdown", available: true },
 
   // Edit PDF
   { name: "Edit PDF", slug: "edit-pdf", description: "Add text, images, shapes, and annotations.", category: "edit", color: "#27AE60", icon: "edit", available: true },
   { name: "Sign PDF", slug: "sign-pdf", description: "Sign or request electronic signatures.", category: "edit", color: "#27AE60", icon: "sign", available: true },
   { name: "Watermark", slug: "watermark", description: "Stamp text or image watermarks on pages.", category: "edit", color: "#27AE60", icon: "watermark", available: true },
-  { name: "PDF Forms", slug: "pdf-forms", description: "Create and fill interactive form fields.", category: "edit", color: "#27AE60", icon: "forms", available: false },
+  { name: "PDF Forms", slug: "pdf-forms", description: "Create and fill interactive form fields.", category: "edit", color: "#27AE60", icon: "forms", available: true },
   { name: "Redact PDF", slug: "redact-pdf", description: "Permanently remove sensitive content.", category: "edit", color: "#27AE60", icon: "redact", available: true },
   { name: "Crop PDF", slug: "crop-pdf", description: "Adjust margins and crop page areas.", category: "edit", color: "#27AE60", icon: "crop", available: true },
 
   // Optimize PDF
-  { name: "Repair PDF", slug: "repair-pdf", description: "Fix damaged or corrupted PDF files.", category: "optimize", color: "#E67E22", icon: "repair", available: false },
-  { name: "Compare PDF", slug: "compare-pdf", description: "Side-by-side comparison of two PDFs.", category: "optimize", color: "#E67E22", icon: "compare", available: false },
-  { name: "Scan to PDF", slug: "scan-to-pdf", description: "Capture document scans from your camera.", category: "optimize", color: "#E67E22", icon: "scan", available: false },
+  { name: "Repair PDF", slug: "repair-pdf", description: "Fix damaged or corrupted PDF files.", category: "optimize", color: "#E67E22", icon: "repair", available: true },
+  { name: "Compare PDF", slug: "compare-pdf", description: "Side-by-side comparison of two PDFs.", category: "optimize", color: "#E67E22", icon: "compare", available: true },
+  { name: "Scan to PDF", slug: "scan-to-pdf", description: "Capture document scans from your camera.", category: "optimize", color: "#E67E22", icon: "scan", available: true },
 
   // Security
-  { name: "Unlock PDF", slug: "unlock-pdf", description: "Remove PDF password protection.", category: "security", color: "#8E44AD", icon: "unlock", available: false },
-  { name: "Protect PDF", slug: "protect-pdf", description: "Encrypt PDF with a password.", category: "security", color: "#8E44AD", icon: "lock", available: false },
+  { name: "Unlock PDF", slug: "unlock-pdf", description: "Remove PDF password protection.", category: "security", color: "#8E44AD", icon: "unlock", available: true },
+  { name: "Protect PDF", slug: "protect-pdf", description: "Encrypt PDF with a password.", category: "security", color: "#8E44AD", icon: "lock", available: true },
 
   // Intelligence
-  { name: "OCR PDF", slug: "ocr-pdf", description: "Extract text from scanned documents.", category: "intelligence", color: "#16A085", icon: "ocr", available: false },
-  { name: "AI Summarizer", slug: "ai-summarizer", description: "Generate concise AI-powered summaries.", category: "intelligence", color: "#16A085", icon: "ai", available: false },
-  { name: "Translate PDF", slug: "translate-pdf", description: "AI-powered document translation.", category: "intelligence", color: "#16A085", icon: "translate", available: false },
+  { name: "OCR PDF", slug: "ocr-pdf", description: "Extract text from scanned documents.", category: "intelligence", color: "#16A085", icon: "ocr", available: true },
+  { name: "AI Summarizer", slug: "ai-summarizer", description: "Generate concise AI-powered summaries.", category: "intelligence", color: "#16A085", icon: "ai", available: true },
+  { name: "Translate PDF", slug: "translate-pdf", description: "AI-powered document translation.", category: "intelligence", color: "#16A085", icon: "translate", available: true },
 ];
