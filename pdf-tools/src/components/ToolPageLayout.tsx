@@ -1,6 +1,7 @@
 "use client";
 
 import { ReactNode } from "react";
+import TrustSignals from "./TrustSignals";
 
 interface ToolPageLayoutProps {
   title: string;
@@ -25,12 +26,14 @@ export default function ToolPageLayout({
         <p className="text-white/80 text-sm sm:text-base max-w-xl mx-auto">
           {description}
         </p>
+        <p className="text-white/60 text-xs mt-3">Free — No registration required</p>
       </div>
 
       {/* Content */}
       <div className="max-w-3xl mx-auto px-4 -mt-6 sm:-mt-8 relative z-10 pb-16">
         <div className="bg-surface border border-border rounded-2xl shadow-lg p-5 sm:p-8">
           {children}
+          <TrustSignals />
         </div>
       </div>
     </div>

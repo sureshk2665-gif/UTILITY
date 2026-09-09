@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
+import { getToolMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Remove PDF Pages Online — Free Tool",
-  description: "Delete specific pages from your PDF document. Free, fast, and secure.",
-};
+export const metadata: Metadata = getToolMetadata("remove-pages");
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return children;

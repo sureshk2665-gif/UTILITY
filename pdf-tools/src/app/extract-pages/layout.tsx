@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
+import { getToolMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Extract PDF Pages — Pull Pages Into New PDF",
-  description: "Extract selected pages from a PDF into a new file. Free online tool.",
-};
+export const metadata: Metadata = getToolMetadata("extract-pages");
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return children;

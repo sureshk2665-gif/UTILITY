@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
+import { getToolMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "PDF to JPG — Convert PDF Pages to Images Free",
-  description: "Convert PDF pages to high-quality JPG images. Free online PDF to image converter.",
-};
+export const metadata: Metadata = getToolMetadata("pdf-to-jpg");
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return children;

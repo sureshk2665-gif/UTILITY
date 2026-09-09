@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
+import { getToolMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Word to PDF — Convert DOCX to PDF Online",
-  description: "Convert Word documents to PDF format. Perfect formatting preservation.",
-};
+export const metadata: Metadata = getToolMetadata("word-to-pdf");
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return children;

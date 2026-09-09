@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
+import { getToolMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Split PDF Online — Separate Pages Free",
-  description: "Split PDF into individual pages. Free online PDF splitter, no installation needed.",
-};
+export const metadata: Metadata = getToolMetadata("split-pdf");
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return children;

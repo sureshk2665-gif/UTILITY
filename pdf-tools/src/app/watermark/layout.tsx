@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
+import { getToolMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Add Watermark to PDF — Free Online Tool",
-  description: "Add custom text watermarks to your PDF files. Control opacity, size, and position.",
-};
+export const metadata: Metadata = getToolMetadata("watermark");
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return children;

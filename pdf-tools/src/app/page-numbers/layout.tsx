@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
+import { getToolMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Add Page Numbers to PDF — Free Online",
-  description: "Add page numbers to PDF with custom position and starting number. Free online tool.",
-};
+export const metadata: Metadata = getToolMetadata("page-numbers");
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return children;

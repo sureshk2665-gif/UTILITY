@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
+import { getToolMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Crop PDF — Adjust Margins Online Free",
-  description: "Crop PDF pages by adjusting margins. Free online PDF cropping tool.",
-};
+export const metadata: Metadata = getToolMetadata("crop-pdf");
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return children;

@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
+import { getToolMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "PDF to Excel — Extract Tables to XLSX Free",
-  description: "Extract tables from PDF to Excel spreadsheets. Smart table detection.",
-};
+export const metadata: Metadata = getToolMetadata("pdf-to-excel");
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return children;

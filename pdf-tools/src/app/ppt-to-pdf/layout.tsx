@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
+import { getToolMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "PowerPoint to PDF — Convert PPTX to PDF",
-  description: "Convert PowerPoint slides to PDF format. High-quality rendering.",
-};
+export const metadata: Metadata = getToolMetadata("ppt-to-pdf");
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return children;

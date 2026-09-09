@@ -1,10 +1,7 @@
 import type { Metadata } from "next";
+import { getToolMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Compare PDF Online - Find Differences Between PDFs | PDF Tools",
-  description: "Compare two PDF documents side by side and find differences. Free online PDF comparison tool.",
-  keywords: ["compare pdf", "pdf diff", "pdf comparison", "find differences in pdf", "side by side pdf"],
-};
+export const metadata: Metadata = getToolMetadata("compare-pdf");
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return children;

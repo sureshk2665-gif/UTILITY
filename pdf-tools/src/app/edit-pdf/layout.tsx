@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
+import { getToolMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Edit PDF Online — Add Text & Annotations Free",
-  description: "Edit PDF files online. Add text annotations with custom font size and color.",
-};
+export const metadata: Metadata = getToolMetadata("edit-pdf");
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return children;

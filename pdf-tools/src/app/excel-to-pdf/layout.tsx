@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
+import { getToolMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Excel to PDF — Convert Spreadsheets Online",
-  description: "Convert Excel spreadsheets to PDF documents online.",
-};
+export const metadata: Metadata = getToolMetadata("excel-to-pdf");
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return children;
