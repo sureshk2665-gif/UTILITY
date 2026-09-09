@@ -97,7 +97,7 @@ export default function PdfToWordTips() {
         <div className="mt-12 p-6 bg-primary/10 rounded-xl text-center">
           <h2 className="text-xl font-bold mb-2">Convert PDF to Word Now</h2>
           <p className="text-muted mb-4">Free, secure, browser-based conversion. No sign-up required.</p>
-          <Link href="/pdf-to-word" className="inline-block bg-primary text-white font-semibold px-6 py-3 rounded-lg hover:opacity-90 transition-opacity">
+          <Link href="/pdf-to-word" className="inline-block btn-primary-glass font-semibold px-6 py-3 rounded-2xl">
             Convert PDF to Word →
           </Link>
         </div>

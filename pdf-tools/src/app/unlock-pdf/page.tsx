@@ -49,7 +49,7 @@ export default function UnlockPDF() {
               className="w-full border border-border rounded-lg px-4 py-2.5 bg-surface text-sm focus:outline-none focus:border-primary" />
           </div>
           <button onClick={handleUnlock} disabled={processing}
-            className="w-full bg-primary hover:bg-primary-dark text-white font-semibold py-3 rounded-xl transition-colors disabled:opacity-50">
+            className="w-full btn-primary-glass font-semibold py-3 rounded-2xl disabled:opacity-50">
             {processing ? "Unlocking..." : "Unlock & Download PDF"}
           </button>
           <p className="text-xs text-muted text-center">

@@ -85,7 +85,7 @@ export default function BestPDFTools() {
         <div className="bg-primary/5 border border-primary/20 rounded-xl p-6 mt-8">
           <h3 className="font-bold text-foreground mb-2">Try PDF Tools Online free</h3>
           <p className="mb-3">33+ tools, no limits, no signup. Start working with your PDFs now.</p>
-          <Link href="/" className="inline-block bg-primary text-white font-semibold px-6 py-2.5 rounded-lg hover:bg-primary-dark transition-colors text-sm">
+          <Link href="/" className="inline-block btn-primary-glass font-semibold px-6 py-2.5 rounded-2xl text-sm">
             Explore All Tools
           </Link>
         </div>

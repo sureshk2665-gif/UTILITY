@@ -53,7 +53,7 @@ export default function PDFToPPT() {
         <div className="mt-6 space-y-3">
           <p className="text-sm text-muted">Each PDF page will be exported as a high-quality image, packaged in a ZIP file ready for import into PowerPoint.</p>
           <button onClick={handleConvert} disabled={processing}
-            className="w-full bg-primary hover:bg-primary-dark text-white font-semibold py-3 rounded-xl transition-colors disabled:opacity-50">
+            className="w-full btn-primary-glass font-semibold py-3 rounded-2xl disabled:opacity-50">
             {processing ? "Converting..." : "Export as Slide Images"}
           </button>
         </div>

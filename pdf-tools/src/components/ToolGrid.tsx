@@ -4,34 +4,11 @@ import { useState } from "react";
 import Link from "next/link";
 import { tools, categories } from "@/lib/tools";
 import {
-  Layers,
-  Scissors,
-  Trash2,
-  FileOutput,
-  RotateCw,
-  Minimize2,
-  FileText,
-  Hash,
-  Image,
-  FileSpreadsheet,
-  Presentation,
-  Globe,
-  Archive,
-  Code,
-  Pencil,
-  PenTool,
-  Droplets,
-  FormInput,
-  EyeOff,
-  Crop,
-  Wrench,
-  GitCompare,
-  Camera,
-  Unlock,
-  Lock,
-  ScanText,
-  Bot,
-  Languages,
+  Layers, Scissors, Trash2, FileOutput, RotateCw, Minimize2,
+  FileText, Hash, Image, FileSpreadsheet, Presentation, Globe,
+  Archive, Code, Pencil, PenTool, Droplets, FormInput, EyeOff,
+  Crop, Wrench, GitCompare, Camera, Unlock, Lock, ScanText,
+  Bot, Languages,
 } from "lucide-react";
 
 const iconMap: Record<string, React.ReactNode> = {
@@ -82,10 +59,10 @@ export default function ToolGrid() {
           <button
             key={cat.id}
             onClick={() => setActiveCategory(cat.id)}
-            className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+            className={`px-4 py-2 rounded-2xl text-sm font-medium transition-all active:scale-95 ${
               activeCategory === cat.id
-                ? "bg-primary text-white"
-                : "bg-surface-alt text-muted hover:text-foreground hover:bg-border"
+                ? "btn-primary-glass text-white"
+                : "btn-glass"
             }`}
           >
             {cat.label}
@@ -98,22 +75,24 @@ export default function ToolGrid() {
         {filtered.map((tool) => {
           const inner = (
             <div
-              className={`group relative bg-surface border border-border rounded-xl p-5 transition-all hover:shadow-md hover:border-primary/30 ${
+              className={`group relative glass-card rounded-2xl p-5 ${
                 !tool.available ? "opacity-50 cursor-default" : ""
               }`}
             >
               <div
-                className="w-12 h-12 rounded-xl flex items-center justify-center mb-3 text-white"
-                style={{ backgroundColor: tool.color }}
+                className="w-12 h-12 rounded-2xl flex items-center justify-center mb-3 text-white shadow-sm"
+                style={{
+                  background: `linear-gradient(135deg, ${tool.color}, ${tool.color}dd)`,
+                }}
               >
                 {iconMap[tool.icon] || <FileText className="w-6 h-6" />}
               </div>
-              <h3 className="font-bold text-sm mb-1">{tool.name}</h3>
+              <h3 className="font-semibold text-sm mb-1">{tool.name}</h3>
               <p className="text-xs text-muted leading-relaxed">
                 {tool.description}
               </p>
               {!tool.available && (
-                <span className="absolute top-3 right-3 bg-surface-alt text-muted text-[10px] px-2 py-0.5 rounded-full font-medium">
+                <span className="absolute top-3 right-3 bg-primary/8 text-primary/60 text-[10px] px-2.5 py-0.5 rounded-full font-medium backdrop-blur-sm">
                   Coming Soon
                 </span>
               )}

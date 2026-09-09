@@ -94,7 +94,7 @@ export default function MergePdfGuide() {
         <div className="mt-12 p-6 bg-primary/10 rounded-xl text-center">
           <h2 className="text-xl font-bold mb-2">Ready to Merge Your PDFs?</h2>
           <p className="text-muted mb-4">Free, fast, and secure. No registration needed.</p>
-          <Link href="/merge-pdf" className="inline-block bg-primary text-white font-semibold px-6 py-3 rounded-lg hover:opacity-90 transition-opacity">
+          <Link href="/merge-pdf" className="inline-block btn-primary-glass font-semibold px-6 py-3 rounded-2xl">
             Merge PDF Files Now →
           </Link>
         </div>

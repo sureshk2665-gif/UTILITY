@@ -57,7 +57,7 @@ export default function CompressPDFGuide() {
         <div className="bg-primary/5 border border-primary/20 rounded-xl p-6 mt-8">
           <h3 className="font-bold text-foreground mb-2">Ready to compress your PDF?</h3>
           <p className="mb-3">Try our free PDF compressor — no signup, no watermarks, unlimited files.</p>
-          <Link href="/compress-pdf" className="inline-block bg-primary text-white font-semibold px-6 py-2.5 rounded-lg hover:bg-primary-dark transition-colors text-sm">
+          <Link href="/compress-pdf" className="inline-block btn-primary-glass font-semibold px-6 py-2.5 rounded-2xl text-sm">
             Compress PDF Now
           </Link>
         </div>

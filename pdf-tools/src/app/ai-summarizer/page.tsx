@@ -80,7 +80,7 @@ export default function AISummarizer() {
             ))}
           </div>
           <button onClick={handleSummarize} disabled={processing}
-            className="w-full bg-primary hover:bg-primary-dark text-white font-semibold py-3 rounded-xl transition-colors disabled:opacity-50">
+            className="w-full btn-primary-glass font-semibold py-3 rounded-2xl disabled:opacity-50">
             {processing ? "Analyzing..." : "Summarize PDF"}
           </button>
         </div>
@@ -89,7 +89,7 @@ export default function AISummarizer() {
         <div className="mt-6 space-y-4">
           <div className="flex gap-2">
             <button onClick={() => saveAs(new Blob([summary], { type: "text/plain" }), "summary.txt")}
-              className="flex-1 bg-primary hover:bg-primary-dark text-white font-semibold py-3 rounded-xl transition-colors">
+              className="flex-1 btn-primary-glass font-semibold py-3 rounded-2xl">
               Download Summary
             </button>
             <button onClick={() => navigator.clipboard.writeText(summary)}

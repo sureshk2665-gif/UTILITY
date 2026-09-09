@@ -50,7 +50,7 @@ export default function OCRPDF() {
       {files.length > 0 && !text && (
         <div className="mt-6">
           <button onClick={handleExtract} disabled={processing}
-            className="w-full bg-primary hover:bg-primary-dark text-white font-semibold py-3 rounded-xl transition-colors disabled:opacity-50">
+            className="w-full btn-primary-glass font-semibold py-3 rounded-2xl disabled:opacity-50">
             {processing ? "Extracting text..." : "Extract Text (OCR)"}
           </button>
         </div>
@@ -60,7 +60,7 @@ export default function OCRPDF() {
           <p className="text-sm text-muted">{pageCount} page(s) processed — {text.split(/\s+/).length} words extracted</p>
           <div className="flex gap-2">
             <button onClick={handleDownload}
-              className="flex-1 bg-primary hover:bg-primary-dark text-white font-semibold py-3 rounded-xl transition-colors">
+              className="flex-1 btn-primary-glass font-semibold py-3 rounded-2xl">
               Download .txt
             </button>
             <button onClick={() => navigator.clipboard.writeText(text)}

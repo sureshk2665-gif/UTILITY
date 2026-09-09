@@ -131,7 +131,7 @@ export default function RedactPDF() {
                 ))}
               </ul>
               <button onClick={handleRedact} disabled={processing}
-                className="w-full bg-primary hover:bg-primary-dark text-white font-semibold py-3 rounded-xl transition-colors disabled:opacity-50">
+                className="w-full btn-primary-glass font-semibold py-3 rounded-2xl disabled:opacity-50">
                 {processing ? "Redacting..." : `Apply ${areas.length} redaction${areas.length > 1 ? "s" : ""}`}
               </button>
             </>

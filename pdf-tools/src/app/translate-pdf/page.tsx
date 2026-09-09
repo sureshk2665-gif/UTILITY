@@ -55,7 +55,7 @@ export default function TranslatePDF() {
       {files.length > 0 && !extracted && (
         <div className="mt-6">
           <button onClick={handleExtract} disabled={processing}
-            className="w-full bg-primary hover:bg-primary-dark text-white font-semibold py-3 rounded-xl transition-colors disabled:opacity-50">
+            className="w-full btn-primary-glass font-semibold py-3 rounded-2xl disabled:opacity-50">
             {processing ? "Extracting text..." : "Extract Text for Translation"}
           </button>
         </div>
@@ -75,7 +75,7 @@ export default function TranslatePDF() {
           </div>
           <div className="flex gap-2">
             <button onClick={openTranslate}
-              className="flex-1 bg-primary hover:bg-primary-dark text-white font-semibold py-3 rounded-xl transition-colors">
+              className="flex-1 btn-primary-glass font-semibold py-3 rounded-2xl">
               Open in Google Translate
             </button>
             <button onClick={() => navigator.clipboard.writeText(text)}

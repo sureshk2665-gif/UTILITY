@@ -53,7 +53,7 @@ export default function RepairPDF() {
             <div className="bg-surface-alt border border-border rounded-xl p-4 text-sm text-muted">{status}</div>
           )}
           <button onClick={handleRepair} disabled={processing}
-            className="w-full bg-primary hover:bg-primary-dark text-white font-semibold py-3 rounded-xl transition-colors disabled:opacity-50">
+            className="w-full btn-primary-glass font-semibold py-3 rounded-2xl disabled:opacity-50">
             {processing ? "Repairing..." : "Repair PDF"}
           </button>
         </div>

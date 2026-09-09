@@ -30,7 +30,7 @@ export default function APIDocsPage() {
           <div className="mt-4 flex gap-2 max-w-md mx-auto">
             <input type="email" placeholder="your@email.com"
               className="flex-1 border border-border rounded-lg px-4 py-2 text-sm bg-surface focus:outline-none focus:border-primary" />
-            <button className="bg-primary text-white font-semibold px-5 py-2 rounded-lg text-sm hover:bg-primary-dark transition-colors">
+            <button className="btn-primary-glass font-semibold px-5 py-2 rounded-2xl text-sm">
               Notify Me
             </button>
           </div>

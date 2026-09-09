@@ -63,7 +63,7 @@ export default function PPTToPDF() {
       {files.length > 0 && (
         <div className="mt-6">
           <button onClick={handleConvert} disabled={processing}
-            className="w-full bg-primary hover:bg-primary-dark text-white font-semibold py-3 rounded-xl transition-colors disabled:opacity-50">
+            className="w-full btn-primary-glass font-semibold py-3 rounded-2xl disabled:opacity-50">
             {processing ? "Converting..." : "Convert to PDF"}
           </button>
         </div>

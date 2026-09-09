@@ -67,7 +67,7 @@ export default function HTMLToPDF() {
           />
         </div>
         <button onClick={handleConvert} disabled={processing || !htmlInput.trim()}
-          className="w-full bg-primary hover:bg-primary-dark text-white font-semibold py-3 rounded-xl transition-colors disabled:opacity-50">
+          className="w-full btn-primary-glass font-semibold py-3 rounded-2xl disabled:opacity-50">
           {processing ? "Converting..." : "Convert to PDF"}
         </button>
       </div>

@@ -68,7 +68,7 @@ export default function ScanToPDF() {
       <div className="space-y-4">
         {!streaming ? (
           <button onClick={startCamera}
-            className="w-full bg-primary hover:bg-primary-dark text-white font-semibold py-3 rounded-xl transition-colors">
+            className="w-full btn-primary-glass font-semibold py-3 rounded-2xl">
             Open Camera
           </button>
         ) : (
@@ -103,7 +103,7 @@ export default function ScanToPDF() {
               ))}
             </div>
             <button onClick={handleCreatePDF} disabled={processing}
-              className="w-full bg-primary hover:bg-primary-dark text-white font-semibold py-3 rounded-xl transition-colors disabled:opacity-50">
+              className="w-full btn-primary-glass font-semibold py-3 rounded-2xl disabled:opacity-50">
               {processing ? "Creating PDF..." : `Create PDF (${captures.length} pages)`}
             </button>
           </>

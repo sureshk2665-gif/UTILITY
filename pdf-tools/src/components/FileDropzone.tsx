@@ -48,13 +48,15 @@ export default function FileDropzone({
         className={`
           border-2 border-dashed rounded-2xl p-8 sm:p-12 text-center cursor-pointer transition-all
           ${isDragActive
-            ? "border-primary bg-primary-light scale-[1.01]"
-            : "border-border hover:border-primary/50 hover:bg-surface-alt"
+            ? "border-primary bg-primary/8 scale-[1.01] shadow-lg shadow-primary/10"
+            : "border-primary/20 hover:border-primary/40 hover:bg-primary/4"
           }
         `}
       >
         <input {...getInputProps()} />
-        <Upload className="w-12 h-12 mx-auto mb-4 text-primary" />
+        <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-primary/10 flex items-center justify-center">
+          <Upload className="w-8 h-8 text-primary" />
+        </div>
         <p className="text-lg font-semibold mb-1">
           {isDragActive ? "Drop your files here" : "Select PDF files"}
         </p>
@@ -68,9 +70,11 @@ export default function FileDropzone({
           {files.map((file, i) => (
             <li
               key={`${file.name}-${i}`}
-              className="flex items-center gap-3 bg-surface border border-border rounded-lg px-4 py-3"
+              className="flex items-center gap-3 glass-card rounded-xl px-4 py-3"
             >
-              <FileText className="w-5 h-5 text-primary flex-shrink-0" />
+              <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <FileText className="w-4 h-4 text-primary" />
+              </div>
               <span className="flex-1 text-sm font-medium truncate">
                 {file.name}
               </span>
@@ -79,7 +83,7 @@ export default function FileDropzone({
               </span>
               <button
                 onClick={() => onRemove(i)}
-                className="text-muted hover:text-primary text-lg leading-none flex-shrink-0"
+                className="w-7 h-7 rounded-lg bg-red-500/8 text-red-500 hover:bg-red-500/15 text-lg leading-none flex-shrink-0 flex items-center justify-center transition-all active:scale-90"
               >
                 &times;
               </button>

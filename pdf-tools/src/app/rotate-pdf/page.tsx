@@ -64,7 +64,7 @@ export default function RotatePDF() {
           <button
             onClick={handleRotate}
             disabled={processing}
-            className="mt-6 w-full bg-primary hover:bg-primary-dark text-white font-semibold py-3 rounded-xl transition-colors disabled:opacity-50"
+            className="mt-6 w-full btn-primary-glass font-semibold py-3 rounded-2xl disabled:opacity-50"
           >
             {processing ? "Rotating..." : "Rotate PDF"}
           </button>
