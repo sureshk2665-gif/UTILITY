@@ -23,17 +23,15 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       {/* Hero */}
-      <section className="relative overflow-hidden py-20 sm:py-28 px-4 text-center">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary via-[#0066DD] to-[#004AAA]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(90,200,250,0.3),transparent_60%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(175,82,222,0.15),transparent_60%)]" />
-        <div className="relative z-10">
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white mb-5 max-w-3xl mx-auto leading-tight tracking-tight">
-            Every tool you need to work with PDFs
+      <section className="py-16 sm:py-24 px-4 text-center bg-surface-alt border-b border-border">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-5 leading-tight tracking-tight">
+            Every tool you need to<br />
+            <span className="text-primary">work with PDFs</span>
           </h1>
-          <p className="text-white/75 text-base sm:text-lg max-w-2xl mx-auto mb-10">
-            Merge, split, compress, convert, rotate, and edit PDF files.
-            Free, online, no installation required.
+          <p className="text-muted text-base sm:text-lg max-w-2xl mx-auto mb-10">
+            Merge, split, compress, convert, rotate, and edit PDF files with ease.
+            All tools are free, online, and require no installation.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             {tools
@@ -43,7 +41,7 @@ export default function Home() {
                 <Link
                   key={tool.slug}
                   href={`/${tool.slug}`}
-                  className="bg-white/15 backdrop-blur-sm text-white font-semibold px-6 py-3 rounded-2xl text-sm border border-white/20 hover:bg-white/25 hover:border-white/35 transition-all active:scale-95 shadow-sm"
+                  className="bg-white text-foreground font-medium px-6 py-3 rounded-xl text-sm border border-border hover:border-primary hover:text-primary hover:shadow-md transition-all"
                 >
                   {tool.name}
                 </Link>
@@ -54,27 +52,32 @@ export default function Home() {
 
       {/* Tool Grid */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
+        <h2 className="text-2xl sm:text-3xl font-bold text-center mb-3">All PDF Tools</h2>
+        <p className="text-muted text-center mb-10 max-w-xl mx-auto">
+          Select a tool below to get started. All tools process files directly in your browser.
+        </p>
         <ToolGrid />
       </section>
 
       {/* Features */}
-      <section className="py-12 sm:py-16 px-4">
+      <section className="py-12 sm:py-16 px-4 bg-surface-alt border-t border-b border-border">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-10">
-            Why choose our PDF Tools?
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-3">
+            Why choose PDF Tools?
           </h2>
+          <p className="text-muted text-center mb-10">Trusted by thousands of users worldwide</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {[
-              { title: "100% Free", desc: "All basic PDF tools are completely free to use with no hidden costs.", icon: "✦" },
-              { title: "No Installation", desc: "Works entirely in your browser. No software to download or install.", icon: "◎" },
-              { title: "Secure & Private", desc: "All files are processed securely and automatically deleted after 2 hours.", icon: "◈" },
-              { title: "Works Everywhere", desc: "Use on any device — desktop, tablet, or mobile. Any browser, any OS.", icon: "▣" },
-              { title: "Fast Processing", desc: "Optimized processing engine handles your files in seconds, not minutes.", icon: "⚡" },
-              { title: "No Registration", desc: "Start using tools immediately. No sign-up or account needed.", icon: "→" },
+              { title: "100% Free", desc: "All basic PDF tools are completely free to use with no hidden costs.", color: "#34C759" },
+              { title: "No Installation", desc: "Works entirely in your browser. No software to download or install.", color: "#007AFF" },
+              { title: "Secure & Private", desc: "All files are processed locally in your browser. Nothing is uploaded.", color: "#AF52DE" },
+              { title: "Works Everywhere", desc: "Use on any device — desktop, tablet, or mobile. Any browser, any OS.", color: "#FF9500" },
+              { title: "Fast Processing", desc: "Optimized processing engine handles your files in seconds, not minutes.", color: "#E74C3C" },
+              { title: "No Registration", desc: "Start using tools immediately. No sign-up or account needed.", color: "#00C7BE" },
             ].map((f) => (
-              <div key={f.title} className="glass-card rounded-2xl p-6">
-                <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary text-lg mb-3">
-                  {f.icon}
+              <div key={f.title} className="bg-white rounded-2xl p-6 border border-border">
+                <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-3" style={{ background: `${f.color}15` }}>
+                  <div className="w-3 h-3 rounded-full" style={{ background: f.color }} />
                 </div>
                 <h3 className="font-semibold text-base mb-1.5">{f.title}</h3>
                 <p className="text-sm text-muted leading-relaxed">{f.desc}</p>

@@ -12,35 +12,35 @@ import {
 } from "lucide-react";
 
 const iconMap: Record<string, React.ReactNode> = {
-  merge: <Layers className="w-6 h-6" />,
-  split: <Scissors className="w-6 h-6" />,
-  remove: <Trash2 className="w-6 h-6" />,
-  extract: <FileOutput className="w-6 h-6" />,
-  rotate: <RotateCw className="w-6 h-6" />,
-  compress: <Minimize2 className="w-6 h-6" />,
-  organize: <FileText className="w-6 h-6" />,
-  numbers: <Hash className="w-6 h-6" />,
-  image: <Image className="w-6 h-6" />,
-  word: <FileText className="w-6 h-6" />,
-  ppt: <Presentation className="w-6 h-6" />,
-  excel: <FileSpreadsheet className="w-6 h-6" />,
-  html: <Globe className="w-6 h-6" />,
-  archive: <Archive className="w-6 h-6" />,
-  markdown: <Code className="w-6 h-6" />,
-  edit: <Pencil className="w-6 h-6" />,
-  sign: <PenTool className="w-6 h-6" />,
-  watermark: <Droplets className="w-6 h-6" />,
-  forms: <FormInput className="w-6 h-6" />,
-  redact: <EyeOff className="w-6 h-6" />,
-  crop: <Crop className="w-6 h-6" />,
-  repair: <Wrench className="w-6 h-6" />,
-  compare: <GitCompare className="w-6 h-6" />,
-  scan: <Camera className="w-6 h-6" />,
-  unlock: <Unlock className="w-6 h-6" />,
-  lock: <Lock className="w-6 h-6" />,
-  ocr: <ScanText className="w-6 h-6" />,
-  ai: <Bot className="w-6 h-6" />,
-  translate: <Languages className="w-6 h-6" />,
+  merge: <Layers className="w-7 h-7" />,
+  split: <Scissors className="w-7 h-7" />,
+  remove: <Trash2 className="w-7 h-7" />,
+  extract: <FileOutput className="w-7 h-7" />,
+  rotate: <RotateCw className="w-7 h-7" />,
+  compress: <Minimize2 className="w-7 h-7" />,
+  organize: <FileText className="w-7 h-7" />,
+  numbers: <Hash className="w-7 h-7" />,
+  image: <Image className="w-7 h-7" />,
+  word: <FileText className="w-7 h-7" />,
+  ppt: <Presentation className="w-7 h-7" />,
+  excel: <FileSpreadsheet className="w-7 h-7" />,
+  html: <Globe className="w-7 h-7" />,
+  archive: <Archive className="w-7 h-7" />,
+  markdown: <Code className="w-7 h-7" />,
+  edit: <Pencil className="w-7 h-7" />,
+  sign: <PenTool className="w-7 h-7" />,
+  watermark: <Droplets className="w-7 h-7" />,
+  forms: <FormInput className="w-7 h-7" />,
+  redact: <EyeOff className="w-7 h-7" />,
+  crop: <Crop className="w-7 h-7" />,
+  repair: <Wrench className="w-7 h-7" />,
+  compare: <GitCompare className="w-7 h-7" />,
+  scan: <Camera className="w-7 h-7" />,
+  unlock: <Unlock className="w-7 h-7" />,
+  lock: <Lock className="w-7 h-7" />,
+  ocr: <ScanText className="w-7 h-7" />,
+  ai: <Bot className="w-7 h-7" />,
+  translate: <Languages className="w-7 h-7" />,
 };
 
 export default function ToolGrid() {
@@ -53,16 +53,15 @@ export default function ToolGrid() {
 
   return (
     <div>
-      {/* Category Tabs */}
-      <div className="flex flex-wrap gap-2 mb-8 justify-center">
+      <div className="flex flex-wrap gap-2 mb-10 justify-center">
         {categories.map((cat) => (
           <button
             key={cat.id}
             onClick={() => setActiveCategory(cat.id)}
-            className={`px-4 py-2 rounded-2xl text-sm font-medium transition-all active:scale-95 ${
+            className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all ${
               activeCategory === cat.id
-                ? "btn-primary-glass text-white"
-                : "btn-glass"
+                ? "bg-foreground text-white shadow-md"
+                : "bg-surface-alt text-muted hover:text-foreground hover:bg-gray-200 border border-border"
             }`}
           >
             {cat.label}
@@ -70,29 +69,24 @@ export default function ToolGrid() {
         ))}
       </div>
 
-      {/* Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-5">
         {filtered.map((tool) => {
           const inner = (
             <div
-              className={`group relative glass-card rounded-2xl p-5 ${
-                !tool.available ? "opacity-50 cursor-default" : ""
-              }`}
+              className={`tool-card ${!tool.available ? "opacity-40 cursor-default" : ""}`}
             >
               <div
-                className="w-12 h-12 rounded-2xl flex items-center justify-center mb-3 text-white shadow-sm"
-                style={{
-                  background: `linear-gradient(135deg, ${tool.color}, ${tool.color}dd)`,
-                }}
+                className="tool-icon"
+                style={{ background: `linear-gradient(135deg, ${tool.color}, ${tool.color}cc)` }}
               >
-                {iconMap[tool.icon] || <FileText className="w-6 h-6" />}
+                {iconMap[tool.icon] || <FileText className="w-7 h-7" />}
               </div>
               <h3 className="font-semibold text-sm mb-1">{tool.name}</h3>
-              <p className="text-xs text-muted leading-relaxed">
+              <p className="text-xs text-muted leading-relaxed line-clamp-2">
                 {tool.description}
               </p>
               {!tool.available && (
-                <span className="absolute top-3 right-3 bg-primary/8 text-primary/60 text-[10px] px-2.5 py-0.5 rounded-full font-medium backdrop-blur-sm">
+                <span className="mt-2 text-[10px] px-2.5 py-0.5 rounded-full bg-gray-100 text-muted font-medium">
                   Coming Soon
                 </span>
               )}

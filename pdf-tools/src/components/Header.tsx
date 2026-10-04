@@ -7,29 +7,38 @@ import { tools } from "@/lib/tools";
 
 const navTools = tools.filter((t) => t.available);
 
+const categoryLabels: Record<string, string> = {
+  organize: "Organize PDF",
+  convert: "Convert PDF",
+  edit: "Edit PDF",
+  optimize: "Optimize",
+  security: "Security",
+  intelligence: "Intelligence",
+};
+
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [toolsOpen, setToolsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 glass-strong">
+    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center gap-2.5 font-bold text-lg">
-            <span className="w-9 h-9 bg-gradient-to-br from-primary to-primary-dark rounded-xl flex items-center justify-center text-white text-sm font-bold shadow-sm">
+            <span className="w-9 h-9 bg-gradient-to-br from-[#E74C3C] to-[#C0392B] rounded-xl flex items-center justify-center text-white text-sm font-bold shadow-sm">
               P
             </span>
-            <span className="hidden sm:inline bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">
+            <span className="hidden sm:inline font-bold text-foreground">
               PDF Tools
             </span>
           </Link>
 
-          <nav className="hidden md:flex items-center gap-0.5">
-            {navTools.slice(0, 4).map((tool) => (
+          <nav className="hidden md:flex items-center gap-1">
+            {navTools.slice(0, 5).map((tool) => (
               <Link
                 key={tool.slug}
                 href={`/${tool.slug}`}
-                className="px-3.5 py-2 text-sm font-medium text-muted hover:text-primary rounded-xl hover:bg-primary/5 transition-all active:scale-95"
+                className="px-3 py-2 text-sm text-muted hover:text-foreground rounded-lg hover:bg-surface-alt transition-colors"
               >
                 {tool.name}
               </Link>
@@ -37,36 +46,37 @@ export default function Header() {
             <div className="relative">
               <button
                 onClick={() => setToolsOpen(!toolsOpen)}
-                className="flex items-center gap-1 px-3.5 py-2 text-sm font-medium text-primary hover:bg-primary/8 rounded-xl transition-all active:scale-95"
+                className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-primary hover:bg-primary/5 rounded-lg transition-colors"
               >
-                All PDF Tools
-                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${toolsOpen ? "rotate-180" : ""}`} />
+                All Tools
+                <ChevronDown className={`w-3.5 h-3.5 transition-transform ${toolsOpen ? "rotate-180" : ""}`} />
               </button>
               {toolsOpen && (
                 <>
                   <div className="fixed inset-0" onClick={() => setToolsOpen(false)} />
-                  <div className="absolute right-0 top-full mt-2 w-[720px] glass-strong rounded-2xl shadow-xl p-6 grid grid-cols-3 gap-4">
-                    {["organize", "optimize", "convert", "edit", "security", "intelligence"].map((cat) => (
-                      <div key={cat}>
-                        <h3 className="text-xs font-semibold uppercase tracking-wider text-primary/60 mb-2">
-                          {cat === "convert" ? "Convert PDF" : cat === "organize" ? "Organize PDF" : cat === "edit" ? "Edit PDF" : cat === "optimize" ? "Optimize PDF" : cat === "security" ? "PDF Security" : "PDF Intelligence"}
-                        </h3>
-                        <ul className="space-y-0.5">
-                          {tools.filter((t) => t.category === cat).map((tool) => (
-                            <li key={tool.slug}>
-                              <Link
-                                href={tool.available ? `/${tool.slug}` : "#"}
-                                onClick={() => setToolsOpen(false)}
-                                className={`text-sm block py-1 px-2 rounded-lg transition-all ${tool.available ? "text-foreground hover:text-primary hover:bg-primary/5" : "text-muted/40 cursor-default"}`}
-                              >
-                                {tool.name}
-                                {!tool.available && <span className="text-[10px] ml-1 text-muted/30">Soon</span>}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
+                  <div className="absolute right-0 top-full mt-2 w-[680px] bg-white rounded-2xl shadow-2xl border border-border p-6 grid grid-cols-3 gap-6">
+                    {Object.entries(categoryLabels).map(([catId, label]) => {
+                      const catTools = tools.filter((t) => t.category === catId);
+                      if (catTools.length === 0) return null;
+                      return (
+                        <div key={catId}>
+                          <h3 className="text-xs font-semibold uppercase tracking-wider text-muted mb-2.5">{label}</h3>
+                          <ul className="space-y-0.5">
+                            {catTools.map((tool) => (
+                              <li key={tool.slug}>
+                                <Link
+                                  href={tool.available ? `/${tool.slug}` : "#"}
+                                  onClick={() => setToolsOpen(false)}
+                                  className={`text-sm block py-1.5 px-2 rounded-lg transition-colors ${tool.available ? "text-foreground hover:text-primary hover:bg-primary/5" : "text-muted/40 cursor-default"}`}
+                                >
+                                  {tool.name}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      );
+                    })}
                   </div>
                 </>
               )}
@@ -75,7 +85,7 @@ export default function Header() {
 
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden p-2 text-muted hover:text-primary rounded-xl hover:bg-primary/5 transition-all active:scale-90"
+            className="md:hidden p-2 text-muted hover:text-foreground rounded-lg transition-colors"
           >
             {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -83,18 +93,27 @@ export default function Header() {
       </div>
 
       {mobileOpen && (
-        <div className="md:hidden border-t border-border glass-strong">
-          <nav className="px-4 py-3 space-y-0.5">
-            {navTools.map((tool) => (
-              <Link
-                key={tool.slug}
-                href={`/${tool.slug}`}
-                onClick={() => setMobileOpen(false)}
-                className="block px-3 py-2.5 text-sm font-medium text-foreground hover:text-primary hover:bg-primary/5 rounded-xl transition-all active:scale-[0.98]"
-              >
-                {tool.name}
-              </Link>
-            ))}
+        <div className="md:hidden border-t border-border bg-white">
+          <nav className="px-4 py-3 space-y-0.5 max-h-[70vh] overflow-y-auto">
+            {Object.entries(categoryLabels).map(([catId, label]) => {
+              const catTools = tools.filter((t) => t.category === catId && t.available);
+              if (catTools.length === 0) return null;
+              return (
+                <div key={catId} className="py-2">
+                  <h3 className="text-xs font-semibold uppercase tracking-wider text-muted px-3 mb-1.5">{label}</h3>
+                  {catTools.map((tool) => (
+                    <Link
+                      key={tool.slug}
+                      href={`/${tool.slug}`}
+                      onClick={() => setMobileOpen(false)}
+                      className="block px-3 py-2 text-sm text-foreground hover:text-primary hover:bg-primary/5 rounded-lg transition-colors"
+                    >
+                      {tool.name}
+                    </Link>
+                  ))}
+                </div>
+              );
+            })}
           </nav>
         </div>
       )}

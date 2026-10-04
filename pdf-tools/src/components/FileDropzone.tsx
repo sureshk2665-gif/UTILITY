@@ -48,8 +48,8 @@ export default function FileDropzone({
         className={`
           border-2 border-dashed rounded-2xl p-8 sm:p-12 text-center cursor-pointer transition-all
           ${isDragActive
-            ? "border-primary bg-primary/8 scale-[1.01] shadow-lg shadow-primary/10"
-            : "border-primary/20 hover:border-primary/40 hover:bg-primary/4"
+            ? "border-primary bg-primary/5 scale-[1.01]"
+            : "border-gray-300 hover:border-primary hover:bg-primary/3"
           }
         `}
       >
@@ -70,10 +70,10 @@ export default function FileDropzone({
           {files.map((file, i) => (
             <li
               key={`${file.name}-${i}`}
-              className="flex items-center gap-3 glass-card rounded-xl px-4 py-3"
+              className="flex items-center gap-3 bg-surface-alt border border-border rounded-xl px-4 py-3"
             >
-              <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                <FileText className="w-4 h-4 text-primary" />
+              <div className="w-8 h-8 rounded-lg bg-red-500/10 flex items-center justify-center flex-shrink-0">
+                <FileText className="w-4 h-4 text-red-500" />
               </div>
               <span className="flex-1 text-sm font-medium truncate">
                 {file.name}
@@ -83,7 +83,7 @@ export default function FileDropzone({
               </span>
               <button
                 onClick={() => onRemove(i)}
-                className="w-7 h-7 rounded-lg bg-red-500/8 text-red-500 hover:bg-red-500/15 text-lg leading-none flex-shrink-0 flex items-center justify-center transition-all active:scale-90"
+                className="w-7 h-7 rounded-lg bg-red-50 text-red-500 hover:bg-red-100 text-lg leading-none flex-shrink-0 flex items-center justify-center transition-colors"
               >
                 &times;
               </button>
